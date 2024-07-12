@@ -1,0 +1,132 @@
+*{
+    font-family: 'Oswald', 'sans-serife';
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    display:grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabecalho" "principal" "rodape";
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: #1867c0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.75);
+}
+.cabecalho > h1 {
+    margin: 0px;
+    font-weight: 300;
+    font-size: 2.8 rem;
+}
+.cabecalho > h2 {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6 rem; 
+}
+
+.principal {
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.conteudo {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.2);
+}
+
+.modulos {
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modulo {
+    flex-basis: 32%;
+}
+
+.modulo > h3 {
+    margin: 0px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5 rem;
+    padding: 10px 20px;
+    background: #1867c0;
+}
+
+.modulo > ul {
+    margin: 10px;
+    padding: 10px;
+    list-style: nome;
+}
+
+.modulo > ul > li {
+    padding: 7px;
+    font-size: 1.2 rem;
+    cursor: pointer;
+}
+
+.modulo > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: #222;
+}
+
+.modulo > ul > li:hover {
+    background-color: gray;
+}
+
+.modulo.b {border: 2px solid #bbb;}
+.modulo.b > h3 {background-color: #bbb;}
+
+.modulo.azul {border: 2px solid blue;}
+.modulo.azul > h3 {background-color:blue;}
+
+.modulo.violeta {border: 2px solid blueviolet;}
+.modulo.violeta > h3 {background-color: blueviolet;}
+
+.modulo.verde {border: 2px solid green;}
+.modulo.verde > h3 {background-color: green;}
+
+.modulo.verm {border: 2px solid red;}
+.modulo.verm > h3 {background-color: red;}
+
+.modulo.ama {border: 2px solid yellow;}
+.modulo.ama > h3 {background-color: yellow;}
+
+.modulo.rosa {border: 2px solid pink;}
+.modulo.rosa > h3 {background-color: pink;}
+
+.modulo.rox {border: 2px solid purple;}
+.modulo.rox > h3 {background-color: purple;}
+
+.modulo.aqua {border: 2px solid aquamarine;}
+.modulo.aqua > h3 {background-color: aquamarine;}
+
+.rodape {
+    grid-area: rodape;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    color: #444;
+}
+
